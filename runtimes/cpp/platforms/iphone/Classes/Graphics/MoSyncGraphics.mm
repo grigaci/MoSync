@@ -434,7 +434,9 @@ int stringLength(const wchar_t* str) {
 
 SYSCALL(void, maDrawTextW(int left, int top, const wchar* str))
 {
-    int numGlyphs = wcharLength(str);
+	const wchar_t* strWCharT = (const wchar_t*)str;
+    int numGlyphs = wchartLength(strWCharT);
+
     FontInfo *currentFont=sFontList[gCurrentFontHandle-1];
     initCGFont(currentFont);
     if(numGlyphs==0) return;
@@ -442,7 +444,7 @@ SYSCALL(void, maDrawTextW(int left, int top, const wchar* str))
 
     //Not all fonts in the device are supported for Unicode glyphs
     //We must check whether the operation was successful
-    if(!CMFontGetGlyphsForUnichars(currentFont->cgFontObject, (const UniChar*)str, glyphs, numGlyphs))
+    if(!CMFontGetGlyphsForUnichars(currentFont->cgFontObject, (const UTF32Char*)str, glyphs, numGlyphs))
     {
         delete glyphs;
         return;
@@ -474,7 +476,7 @@ SYSCALL(MAExtent, maGetTextSizeW(const wchar* str))
     int numGlyphs = wcharLength(str);
     if(numGlyphs==0) return EXTENT(0, 0);
     CGGlyph* glyphs = new CGGlyph[numGlyphs];
-    CMFontGetGlyphsForUnichars(currentFont->cgFontObject, (const UniChar*)str, glyphs, numGlyphs);
+    CMFontGetGlyphsForUnichars(currentFont->cgFontObject, (const UTF32Char*)str, glyphs, numGlyphs);
     CGContextSetTextDrawingMode(gDrawTarget->context, kCGTextInvisible);
     CGContextSetTextPosition (gDrawTarget->context, 0, 0);
     CGContextShowGlyphsAtPoint(gDrawTarget->context, 0, 0, glyphs, numGlyphs);

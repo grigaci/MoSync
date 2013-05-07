@@ -46,13 +46,13 @@ typedef CMCMap4 * CMCMap4Ref;
 
 static CFMutableDictionaryRef cmapCache = NULL; // Dictionary mapping CMFontRef to _CMCMap
 CMCMap4Ref CMGetCMapForFont(CGFontRef cgFont);
-CGGlyph CMCMapGetGlyphIndexForUnichar(CMCMap4Ref cmap, UniChar c);
+CGGlyph CMCMapGetGlyphIndexForUnichar(CMCMap4Ref cmap, UTF32Char c);
 
 CMCMap4Ref CMCMapCreate(CFDataRef fontTable, UInt32 segmentOffset);
 void CMCMapRelease(CMCMap4Ref cmap);
 
 
-int CMFontGetGlyphsForUnichars(CGFontRef cgFont, const UniChar buffer[], CGGlyph glyphs[], size_t numGlyphs) {
+int CMFontGetGlyphsForUnichars(CGFontRef cgFont, const UTF32Char buffer[], CGGlyph glyphs[], size_t numGlyphs) {
 
 	CMCMap4Ref cmap = CMGetCMapForFont(cgFont);
     if(!cmap)
@@ -126,7 +126,7 @@ CMCMap4Ref CMGetCMapForFont(CGFontRef cgFont) {
     return NULL;
 }
 
-CGGlyph CMCMapGetGlyphIndexForUnichar(CMCMap4Ref cmap, UniChar c) {
+CGGlyph CMCMapGetGlyphIndexForUnichar(CMCMap4Ref cmap, UTF32Char c) {
 	// TODO: Binary search?
 	for (int i = 0; i < cmap->segCount; i++) {
 		// Find first endcode greater or equal to the char code
