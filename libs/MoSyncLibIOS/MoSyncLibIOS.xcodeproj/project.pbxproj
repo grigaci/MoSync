@@ -194,6 +194,7 @@
 		0BC7BEFF1728218F007662C2 /* maxtoa.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7BEFE1728218F007662C2 /* maxtoa.c */; };
 		0BC7BF01172821BD007662C2 /* mavsprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7BF00172821BD007662C2 /* mavsprintf.c */; };
 		0BC7BF031728226E007662C2 /* mawstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BC7BF021728226E007662C2 /* mawstring.c */; };
+		8B007EB71754E30200F79FCE /* PhoneGapFileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B007EB51754E30200F79FCE /* PhoneGapFileUtils.cpp */; };
 		8B3FD681173A350F00419203 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FD67F173A350F00419203 /* Camera.cpp */; };
 		8B3FD68A173A4C9000419203 /* MTSax.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FD685173A4C9000419203 /* MTSax.cpp */; };
 		8B3FD68B173A4C9000419203 /* MTXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B3FD687173A4C9000419203 /* MTXml.cpp */; };
@@ -745,6 +746,8 @@
 		0BC7BEFE1728218F007662C2 /* maxtoa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = maxtoa.c; sourceTree = "<group>"; };
 		0BC7BF00172821BD007662C2 /* mavsprintf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mavsprintf.c; sourceTree = "<group>"; };
 		0BC7BF021728226E007662C2 /* mawstring.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mawstring.c; sourceTree = "<group>"; };
+		8B007EB51754E30200F79FCE /* PhoneGapFileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhoneGapFileUtils.cpp; sourceTree = "<group>"; };
+		8B007EB61754E30200F79FCE /* PhoneGapFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneGapFileUtils.h; sourceTree = "<group>"; };
 		8B3FD67F173A350F00419203 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		8B3FD680173A350F00419203 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
 		8B3FD684173A4C9000419203 /* entities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = entities.h; path = ../../MTXml/entities.h; sourceTree = "<group>"; };
@@ -1553,6 +1556,8 @@
 				0B92BA541712BB81002DFDF6 /* PhoneGapCapture.h */,
 				0B92BA551712BB81002DFDF6 /* PhoneGapFile.cpp */,
 				0B92BA561712BB81002DFDF6 /* PhoneGapFile.h */,
+				8B007EB51754E30200F79FCE /* PhoneGapFileUtils.cpp */,
+				8B007EB61754E30200F79FCE /* PhoneGapFileUtils.h */,
 				0B92BA571712BB81002DFDF6 /* PhoneGapMessageHandler.cpp */,
 				0B92BA581712BB81002DFDF6 /* PhoneGapMessageHandler.h */,
 				0B92BA591712BB81002DFDF6 /* PhoneGapSensors.cpp */,
@@ -2627,6 +2632,7 @@
 				8B88F73A174645AC00FC1E22 /* Touch.cpp in Sources */,
 				8B88F73B174645AC00FC1E22 /* Utils.cpp in Sources */,
 				8B812DFC174785FE00276DD5 /* dummy.cpp in Sources */,
+				8B007EB71754E30200F79FCE /* PhoneGapFileUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
