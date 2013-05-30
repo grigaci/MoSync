@@ -26,6 +26,10 @@ MA 02110-1301, USA.
 #include <ma.h>
 #include <maassert.h>
 
+#if defined(MOSYNC_NATIVE) && defined(__IOS__)
+#undef USE_NEWLIB
+#endif
+
 #ifdef USE_NEWLIB
 #include <math.h>
 #include <malloc.h>

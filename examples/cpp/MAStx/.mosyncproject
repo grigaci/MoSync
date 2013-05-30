@@ -22,7 +22,7 @@
 <property key="build.prefs:extra.res.sw/Debug" value=""/>
 <property key="build.prefs:extra.res.sw/Release" value=""/>
 <property key="build.prefs:gcc.switches" value="-O2"/>
-<property key="build.prefs:gcc.switches/Debug" value="-O0 -UUSE_NEWLIB"/>
+<property key="build.prefs:gcc.switches/Debug" value="-O0"/>
 <property key="build.prefs:gcc.warnings" value="0"/>
 <property key="build.prefs:ignore.default.include.paths" value="true"/>
 <property key="build.prefs:ignore.default.include.paths/Debug" value="true"/>
